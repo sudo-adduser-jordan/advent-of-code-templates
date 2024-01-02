@@ -41,119 +41,119 @@ const std::unordered_set<std::string> validArgs = {
 //                     Solution23B::PrintSolution, Solution24B::PrintSolution,
 //                     Solution25B::PrintSolution};
 
-const std::vector<std::vector<std::filesystem::path>> SolutionInputPaths = {
-    {"Solution01.input"}, {"Solution02.input"}, {"Solution03.input"},
-    {"Solution04.input"}, {"Solution05.input"}, {"Solution06.input"},
-    {"Solution07.input"}, {"Solution08.input"}, {"Solution09.input"},
-    {"Solution10.input"}, {"Solution11.input"}, {"Solution12.input"},
-    {"Solution13.input"}, {"Solution14.input"}, {"Solution15.input"},
-    {"Solution16.input"}, {"Solution17.input"}, {"Solution18.input"},
-    {"Solution19.input"}, {"Solution20.input"}, {"Solution21.input"},
-    {"Solution22.input"}, {"Solution23.input"}, {"Solution24.input"},
-    {"Solution25.input"},
-};
+// const std::vector<std::vector<std::filesystem::path>> SolutionInputPaths = {
+//     {"Solution01.input"}, {"Solution02.input"}, {"Solution03.input"},
+//     {"Solution04.input"}, {"Solution05.input"}, {"Solution06.input"},
+//     {"Solution07.input"}, {"Solution08.input"}, {"Solution09.input"},
+//     {"Solution10.input"}, {"Solution11.input"}, {"Solution12.input"},
+//     {"Solution13.input"}, {"Solution14.input"}, {"Solution15.input"},
+//     {"Solution16.input"}, {"Solution17.input"}, {"Solution18.input"},
+//     {"Solution19.input"}, {"Solution20.input"}, {"Solution21.input"},
+//     {"Solution22.input"}, {"Solution23.input"}, {"Solution24.input"},
+//     {"Solution25.input"},
+// };
 
-const std::vector<std::vector<std::vector<std::filesystem::path>>>
-    SolutionSamplePaths = {{
-                             {"Solution01SampleA.input"},
-                             {"Solution01SampleB.input"},
-                         },
-                         {
-                             {"Solution02SampleA.input"},
-                             {"Solution02SampleA.input"},
-                         },
-                         {
-                             {"Solution03SampleA.input"},
-                             {"Solution03SampleA.input"},
-                         },
-                         {
-                             {"Solution04SampleA.input"},
-                             {"Solution04SampleA.input"},
-                         },
-                         {
-                             {"Solution05SampleA.input"},
-                             {"Solution05SampleA.input"},
-                         },
-                         {
-                             {"Solution06SampleA.input"},
-                             {"Solution06SampleA.input"},
-                         },
-                         {
-                             {"Solution07SampleA.input"},
-                             {"Solution07SampleA.input"},
-                         },
-                         {
-                             {"Solution08SampleA.input"},
-                             {"Solution08SampleA.input"},
-                         },
-                         {
-                             {"Solution09SampleA.input"},
-                             {"Solution09SampleA.input"},
-                         },
-                         {
-                             {"Solution10SampleA.input"},
-                             {"Solution10SampleA.input"},
-                         },
-                         {
-                             {"Solution11SampleA.input"},
-                             {"Solution11SampleA.input"},
-                         },
-                         {
-                             {"Solution12SampleA.input"},
-                             {"Solution12SampleA.input"},
-                         },
-                         {
-                             {"Solution13SampleA.input"},
-                             {"Solution13SampleA.input"},
-                         },
-                         {
-                             {"Solution14SampleA.input"},
-                             {"Solution14SampleA.input"},
-                         },
-                         {
-                             {"Solution15SampleA.input"},
-                             {"Solution15SampleA.input"},
-                         },
-                         {
-                             {"Solution16SampleA.input"},
-                             {"Solution16SampleA.input"},
-                         },
-                         {
-                             {"Solution17SampleA.input"},
-                             {"Solution17SampleA.input"},
-                         },
-                         {
-                             {"Solution18SampleA.input"},
-                             {"Solution18SampleA.input"},
-                         },
-                         {
-                             {"Solution19SampleA.input"},
-                             {"Solution19SampleA.input"},
-                         },
-                         {
-                             {"Solution20SampleA.input"},
-                             {"Solution20SampleA.input"},
-                         },
-                         {
-                             {"Solution21SampleA.input"},
-                             {"Solution21SampleA.input"},
-                         },
-                         {
-                             {"Solution22SampleA.input"},
-                             {"Solution22SampleA.input"},
-                         },
-                         {
-                             {"Solution23SampleA.input"},
-                             {"Solution23SampleA.input"},
-                         },
-                         {
-                             {"Solution24SampleA.input"},
-                             {"Solution24SampleA.input"},
-                         },
-                         {
-                             {"Solution25SampleA.input"},
-                             {"Solution25SampleA.input"},
-                         }};
+// const std::vector<std::vector<std::vector<std::filesystem::path>>>
+//     SolutionSamplePaths = {{
+//                              {"Solution01SampleA.input"},
+//                              {"Solution01SampleB.input"},
+//                          },
+//                          {
+//                              {"Solution02SampleA.input"},
+//                              {"Solution02SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution03SampleA.input"},
+//                              {"Solution03SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution04SampleA.input"},
+//                              {"Solution04SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution05SampleA.input"},
+//                              {"Solution05SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution06SampleA.input"},
+//                              {"Solution06SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution07SampleA.input"},
+//                              {"Solution07SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution08SampleA.input"},
+//                              {"Solution08SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution09SampleA.input"},
+//                              {"Solution09SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution10SampleA.input"},
+//                              {"Solution10SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution11SampleA.input"},
+//                              {"Solution11SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution12SampleA.input"},
+//                              {"Solution12SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution13SampleA.input"},
+//                              {"Solution13SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution14SampleA.input"},
+//                              {"Solution14SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution15SampleA.input"},
+//                              {"Solution15SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution16SampleA.input"},
+//                              {"Solution16SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution17SampleA.input"},
+//                              {"Solution17SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution18SampleA.input"},
+//                              {"Solution18SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution19SampleA.input"},
+//                              {"Solution19SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution20SampleA.input"},
+//                              {"Solution20SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution21SampleA.input"},
+//                              {"Solution21SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution22SampleA.input"},
+//                              {"Solution22SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution23SampleA.input"},
+//                              {"Solution23SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution24SampleA.input"},
+//                              {"Solution24SampleA.input"},
+//                          },
+//                          {
+//                              {"Solution25SampleA.input"},
+//                              {"Solution25SampleA.input"},
+//                          }};
 
 // struct Args {
 //   bool useSampleInput = false;
@@ -243,9 +243,9 @@ const std::vector<std::vector<std::vector<std::filesystem::path>>>
 int main(int argc, char *argv[]) {
 
 CodeGenerator::GenerateMarkDownFiles();
-// CodeGenerator::GenerateInputFiles();
-// CodeGenerator::GenerateHeaders();
-// CodeGenerator::GenerateSolutions();
+CodeGenerator::GenerateHeaders();
+CodeGenerator::GenerateSolutions();
+CodeGenerator::GenerateInputFiles();
 
   // Args args = ReadArgs(argc, argv);
   // if (args.SolutionsToRun.empty()) {

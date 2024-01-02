@@ -1,16 +1,13 @@
 #include "pch.h"
+#include "Solutions.h"
+#include "../../packages/utilities/Utilities.h"
 
-#include "../Utilities/Utilities.h"
-#include "PuzzleSolvers.h"
-#include "Colors.h"
-
-namespace Puzzle
+namespace Solution
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender)
 	{
-		auto input = file_into_string_vector(inputFile);
-
+		auto input = Utilities::file_into_string_vector(inputFile);
 		int result = 0;
 		std::cout << "\t\t" << GREEN_TEXT << "\t\t" << result << std::endl;
 	}
-} // namespace Puzzle
+} // namespace Solution

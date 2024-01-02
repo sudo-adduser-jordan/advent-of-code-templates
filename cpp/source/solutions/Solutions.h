@@ -1,251 +1,250 @@
-#pragma once
 
-namespace Puzzle01A
+namespace Solutions01A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle01B
+namespace Solutions01B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle02A
+namespace Solutions02A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle02B
+namespace Solutions02B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle03A
+namespace Solutions03A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle03B
+namespace Solutions03B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle04A
+namespace Solutions04A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle04B
+namespace Solutions04B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle05A
+namespace Solutions05A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle05B
+namespace Solutions05B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle06A
+namespace Solutions06A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle06B
+namespace Solutions06B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle07A
+namespace Solutions07A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle07B
+namespace Solutions07B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle08A
+namespace Solutions08A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle08B
+namespace Solutions08B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle09A
+namespace Solutions09A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle09B
+namespace Solutions09B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle10A
+namespace Solutions10A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle10B
+namespace Solutions10B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle11A
+namespace Solutions11A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle11B
+namespace Solutions11B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle12A
+namespace Solutions12A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle12B
+namespace Solutions12B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle13A
+namespace Solutions13A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle13B
+namespace Solutions13B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle14A
+namespace Solutions14A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle14B
+namespace Solutions14B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle15A
+namespace Solutions15A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle15B
+namespace Solutions15B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle16A
+namespace Solutions16A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle16B
+namespace Solutions16B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle17A
+namespace Solutions17A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle17B
+namespace Solutions17B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle18A
+namespace Solutions18A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle18B
+namespace Solutions18B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle19A
+namespace Solutions19A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle19B
+namespace Solutions19B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle20A
+namespace Solutions20A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle20B
+namespace Solutions20B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle21A
+namespace Solutions21A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle21B
+namespace Solutions21B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle22A
+namespace Solutions22A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle22B
+namespace Solutions22B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle23A
+namespace Solutions23A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle23B
+namespace Solutions23B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle24A
+namespace Solutions24A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle24B
+namespace Solutions24B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle25A
+namespace Solutions25A
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }
 
-namespace Puzzle25B
+namespace Solutions25B
 {
 	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);
 }

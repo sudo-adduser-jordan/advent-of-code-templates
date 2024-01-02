@@ -18,6 +18,7 @@ cd ..
 cd ./source
 g++ -c *.cpp
 mv *.o ../build/debug/
+cp *.txt ../build/debug/
 cd ..
 
 # LINK AND COMPILE BINARY
@@ -25,11 +26,11 @@ g++ \
     ./build/debug/AdventOfCode.o \
     ./build/debug/CodeGenerator.o \
     ./build/debug/utilities.a \
-    -o AdventOfCode.out 
+    -o ./build/debug/AdventOfCode.exe 
 
 
 # Execute Binary
 # cd ./build/debug/
-./AdventOfCode.out
+./build/debug/AdventOfCode.exe
 # ./AdventOfCode.out --puzzle01
 # ./AdventOfCode.out --puzzle01 --sample

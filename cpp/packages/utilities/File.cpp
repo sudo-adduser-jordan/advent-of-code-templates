@@ -41,8 +41,7 @@ namespace Utilities
 
 		for (auto i = 1; i < lines.size(); i++)
 		{
-			fileStream.open(path);
-			fileStream.close();
+			fileStream << lines[i] << std::endl;
 		}
 
 		return fileStream.good();

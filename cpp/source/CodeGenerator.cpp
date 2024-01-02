@@ -40,7 +40,7 @@ namespace CodeGenerator
 				lines.emplace_back("");
 
 				auto builder = std::stringstream{};
-				builder << "namespace Problem" << std::setfill('0') << std::setw(2) << i << suffix;
+				builder << "namespace Solutions" << std::setfill('0') << std::setw(2) << i << suffix;
 				lines.emplace_back(builder.str());
 				lines.emplace_back("{");
 				lines.emplace_back("\tvoid PrintSolution(const std::filesystem::path& inputFile, bool shouldRender);");
@@ -48,75 +48,63 @@ namespace CodeGenerator
 			}
 		}
 
-		Utilities::string_vector_vector_to_file("ProblemSolvers.h", lines);
+		Utilities::string_vector_vector_to_file("source/solutions/Solutions.h", lines);
 	}
 
 	void GenerateSolutions()
 	{
-		// line # 9, 15, 17
-		// namespace Problem
-		//		std::cout << "Problem not yet solved!";
-		// } // namespace Problem
+		std::filesystem::create_directories(SOLUTIONS_PATH);
 
-		std::string line9 = "namespace Problem";
-		std::string line15a = R"(		std::cout << "\t\tProblem)";
-		std::string line15b = R"( not yet solved !";)";
-		std::string line17 = "} // namespace Problem";
+		// line # 5, 13
+		std::string line5 = "namespace Solutions";
+		std::string line13 = "} // namespace Solutions";
 
-		std::ifstream input_file("ProblemTemplate.txt");
+		std::ifstream input_file("./build/debug/SolutionTemplate.txt");
 		std::vector<std::string> lines;
 		std::string input;
 
 		while (std::getline(input_file, input))
 		{
 			lines.push_back(input);
+			std::cout << input << std::endl;
 		}
 		input_file.close();
 
-		for (auto i = 6; i <= TOTAL_FILES; i++)
+		for (auto i = 1; i <= TOTAL_FILES; i++)
 		{
 			for (auto j = 0; j < 2; ++j)
 			{
 				char part = (j == 0 ? 'A' : 'B');
 				std::string day = (i < 10 ? '0' + std::to_string(i) : std::to_string(i));
-				std::string output_file = "Problem" + day + part + ".cpp";
+				std::string output_file =  SOLUTIONS_PATH + "Solution" + day + part + ".cpp";
 
-				std::string line9New = line9;
-				std::string line22New = line15a;
-				std::string line17New = line17;
+				lines[4] = line5 + day + part;
+				lines[12] = line13 + day + part;
 
-				line9New += day + part;
-				line22New += day + part + line15b;
-				line17New += day + part;
-
-				lines[8] = line9New;
-				lines[14] = line22New;
-				lines[16] = line17New;
-
+				std::cout << lines[12] << std::endl;
 				Utilities::string_vector_vector_to_file(output_file, lines);
-				// std::cout << "File created.\n";
 			}
 		}
 	}
 
 	void GenerateInputFiles()
 	{
+		std::filesystem::create_directories(INPUT_PATH);
+		std::filesystem::create_directories(SAMPLES_PATH);
 		auto lines = std::vector<std::string>{ "" };
 		for (auto i = 1; i <= TOTAL_FILES; ++i)
 		{
 			{
 				auto builder = std::stringstream{};
-				builder << "Problem" << std::setfill('0') << std::setw(2) << i << ".input";
+				builder << INPUT_PATH << "Problem" << std::setfill('0') << std::setw(2) << i << ".input";
 				Utilities::string_vector_vector_to_file(builder.str(), lines);
 			}
 
 			{
 				auto builder = std::stringstream{};
-				builder << "Problem" << std::setfill('0') << std::setw(2) << i << "SampleA.input";
+				builder << SAMPLES_PATH << "Sample" << std::setfill('0') << std::setw(2) << i << ".input";
 				Utilities::string_vector_vector_to_file(builder.str(), lines);
 			}
 		}
 	}
-
-
 } // namespace CodeGenerator
