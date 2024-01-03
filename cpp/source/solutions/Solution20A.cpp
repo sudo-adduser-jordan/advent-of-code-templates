@@ -3,7 +3,7 @@
 
 namespace Solutions20A
 {
-	void PrintSolution(const std::filesystem::path& inputFile, bool shouldRender)
+	void PrintSolution(const std::filesystem::path &inputFile)
 	{
 		auto input = Utilities::file_into_string_vector(inputFile);
 		int result = 0;

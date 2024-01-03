@@ -59,7 +59,7 @@
 #include <algorithm>
 //#include <bitset>
 //#include <complex>
-//#include <deque>
+#include <deque>
 //#include <exception>
 #include <fstream>
 #include <functional>
@@ -68,7 +68,7 @@
 //#include <iosfwd>
 #include <iostream>
 //#include <istream>
-//#include <iterator>
+#include <iterator>
 //#include <limits>
 #include <list>
 //#include <locale>
@@ -78,7 +78,7 @@
 //#include <numeric>
 //#include <ostream>
 #include <queue>
-//#include <set>
+#include <set>
 #include <sstream>
 #include <stack> 
 //#include <stdexcept>
@@ -103,9 +103,9 @@
 //#include <ratio>
 //#include <regex>
 //#include <scoped_allocator>
-//#include <system_error>
+#include <system_error>
 //#include <thread>
-//#include <tuple>
+#include <tuple>
 //#include <typeindex>
 //#include <type_traits>
 #include <unordered_map>
@@ -126,7 +126,7 @@
 // __cplusplus >= 202002L
 //#include <barrier>
 //#include <bit>
-//#include <compare>
+#include <compare>
 //#include <concepts>
 //#include <coroutine>
 //#include <latch>

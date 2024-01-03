@@ -2,350 +2,371 @@
 
 #include "../packages/utilities/Utilities.h"
 #include "CodeGenerator.h"
+#include "solutions/Solutions.h"
 
 const std::unordered_set<std::string> validArgs = {
-    "--sample", "--input", "--render",   "--parta",    "--partb",
-    "--solution01",    "--solution02",  "--solution03", "--solution04", "--solution05",
-    "--solution06",    "--solution07",  "--solution08", "--solution09", "--solution10",
-    "--solution11",    "--solution12",  "--solution13", "--solution14", "--solution15",
-    "--solution16",    "--solution17",  "--solution18", "--solution19", "--solution20",
-    "--solution21",    "--solution22",  "--solution23", "--solution24", "--solution25"};
+    "--sample", "--input", "--parta", "--partb",
+    "--solution01", "--solution02", "--solution03", "--solution04", "--solution05",
+    "--solution06", "--solution07", "--solution08", "--solution09", "--solution10",
+    "--solution11", "--solution12", "--solution13", "--solution14", "--solution15",
+    "--solution16", "--solution17", "--solution18", "--solution19", "--solution20",
+    "--solution21", "--solution22", "--solution23", "--solution24", "--solution25"};
 
-// const std::vector<std::function<void(const std::filesystem::path &, bool)>>
-//     partASolvers = {Solution01A::PrintSolution, Solution02A::PrintSolution,
-//                     Solution03A::PrintSolution, Solution04A::PrintSolution,
-//                     Solution05A::PrintSolution, Solution06A::PrintSolution,
-//                     Solution07A::PrintSolution, Solution08A::PrintSolution,
-//                     Solution09A::PrintSolution, Solution10A::PrintSolution,
-//                     Solution11A::PrintSolution, Solution12A::PrintSolution,
-//                     Solution13A::PrintSolution, Solution14A::PrintSolution,
-//                     Solution15A::PrintSolution, Solution16A::PrintSolution,
-//                     Solution17A::PrintSolution, Solution18A::PrintSolution,
-//                     Solution19A::PrintSolution, Solution20A::PrintSolution,
-//                     Solution21A::PrintSolution, Solution22A::PrintSolution,
-//                     Solution23A::PrintSolution, Solution24A::PrintSolution,
-//                     Solution25A::PrintSolution};
+const std::vector<std::function<void(const std::filesystem::path &)>>
+    SOLUTIONS_A = {
+        Solutions01A::PrintSolution,
+        Solutions02A::PrintSolution,
+        Solutions03A::PrintSolution,
+        Solutions04A::PrintSolution,
+        Solutions05A::PrintSolution,
+        Solutions06A::PrintSolution,
+        Solutions07A::PrintSolution,
+        Solutions08A::PrintSolution,
+        Solutions09A::PrintSolution,
+        Solutions10A::PrintSolution,
+        Solutions11A::PrintSolution,
+        Solutions12A::PrintSolution,
+        Solutions13A::PrintSolution,
+        Solutions14A::PrintSolution,
+        Solutions15A::PrintSolution,
+        Solutions16A::PrintSolution,
+        Solutions17A::PrintSolution,
+        Solutions18A::PrintSolution,
+        Solutions19A::PrintSolution,
+        Solutions20A::PrintSolution,
+        Solutions21A::PrintSolution,
+        Solutions22A::PrintSolution,
+        Solutions23A::PrintSolution,
+        Solutions24A::PrintSolution,
+        Solutions25A::PrintSolution};
 
-// const std::vector<std::function<void(const std::filesystem::path &, bool)>>
-//     partBSolvers = {Solution01B::PrintSolution, Solution02B::PrintSolution,
-//                     Solution03B::PrintSolution, Solution04B::PrintSolution,
-//                     Solution05B::PrintSolution, Solution06B::PrintSolution,
-//                     Solution07B::PrintSolution, Solution08B::PrintSolution,
-//                     Solution09B::PrintSolution, Solution10B::PrintSolution,
-//                     Solution11B::PrintSolution, Solution12B::PrintSolution,
-//                     Solution13B::PrintSolution, Solution14B::PrintSolution,
-//                     Solution15B::PrintSolution, Solution16B::PrintSolution,
-//                     Solution17B::PrintSolution, Solution18B::PrintSolution,
-//                     Solution19B::PrintSolution, Solution20B::PrintSolution,
-//                     Solution21B::PrintSolution, Solution22B::PrintSolution,
-//                     Solution23B::PrintSolution, Solution24B::PrintSolution,
-//                     Solution25B::PrintSolution};
+const std::vector<std::function<void(const std::filesystem::path)>>
+    SOLUTIONS_B = {
+        Solutions01B::PrintSolution,
+        Solutions02B::PrintSolution,
+        Solutions03B::PrintSolution,
+        Solutions04B::PrintSolution,
+        Solutions05B::PrintSolution,
+        Solutions06B::PrintSolution,
+        Solutions07B::PrintSolution,
+        Solutions08B::PrintSolution,
+        Solutions09B::PrintSolution,
+        Solutions10B::PrintSolution,
+        Solutions11B::PrintSolution,
+        Solutions12B::PrintSolution,
+        Solutions13B::PrintSolution,
+        Solutions14B::PrintSolution,
+        Solutions15B::PrintSolution,
+        Solutions16B::PrintSolution,
+        Solutions17B::PrintSolution,
+        Solutions18B::PrintSolution,
+        Solutions19B::PrintSolution,
+        Solutions20B::PrintSolution,
+        Solutions21B::PrintSolution,
+        Solutions22B::PrintSolution,
+        Solutions23B::PrintSolution,
+        Solutions24B::PrintSolution,
+        Solutions25B::PrintSolution};
 
-// const std::vector<std::vector<std::filesystem::path>> SolutionInputPaths = {
-//     {"Solution01.input"}, {"Solution02.input"}, {"Solution03.input"},
-//     {"Solution04.input"}, {"Solution05.input"}, {"Solution06.input"},
-//     {"Solution07.input"}, {"Solution08.input"}, {"Solution09.input"},
-//     {"Solution10.input"}, {"Solution11.input"}, {"Solution12.input"},
-//     {"Solution13.input"}, {"Solution14.input"}, {"Solution15.input"},
-//     {"Solution16.input"}, {"Solution17.input"}, {"Solution18.input"},
-//     {"Solution19.input"}, {"Solution20.input"}, {"Solution21.input"},
-//     {"Solution22.input"}, {"Solution23.input"}, {"Solution24.input"},
-//     {"Solution25.input"},
-// };
+const std::vector<std::filesystem::path>
+    INPUT_PATHS = {
+        "Input01.input",
+        "Input02.input",
+        "Input03.input",
+        "Input04.input",
+        "Input05.input",
+        "Input06.input",
+        "Input07.input",
+        "Input08.input",
+        "Input09.input",
+        "Input10.input",
+        "Input11.input",
+        "Input12.input",
+        "Input13.input",
+        "Input14.input",
+        "Input15.input",
+        "Input16.input",
+        "Input17.input",
+        "Input18.input",
+        "Input19.input",
+        "Input20.input",
+        "Input21.input",
+        "Input22.input",
+        "Input23.input",
+        "Input24.input",
+        "Input25.input",
+};
 
-// const std::vector<std::vector<std::vector<std::filesystem::path>>>
-//     SolutionSamplePaths = {{
-//                              {"Solution01SampleA.input"},
-//                              {"Solution01SampleB.input"},
-//                          },
-//                          {
-//                              {"Solution02SampleA.input"},
-//                              {"Solution02SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution03SampleA.input"},
-//                              {"Solution03SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution04SampleA.input"},
-//                              {"Solution04SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution05SampleA.input"},
-//                              {"Solution05SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution06SampleA.input"},
-//                              {"Solution06SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution07SampleA.input"},
-//                              {"Solution07SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution08SampleA.input"},
-//                              {"Solution08SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution09SampleA.input"},
-//                              {"Solution09SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution10SampleA.input"},
-//                              {"Solution10SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution11SampleA.input"},
-//                              {"Solution11SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution12SampleA.input"},
-//                              {"Solution12SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution13SampleA.input"},
-//                              {"Solution13SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution14SampleA.input"},
-//                              {"Solution14SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution15SampleA.input"},
-//                              {"Solution15SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution16SampleA.input"},
-//                              {"Solution16SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution17SampleA.input"},
-//                              {"Solution17SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution18SampleA.input"},
-//                              {"Solution18SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution19SampleA.input"},
-//                              {"Solution19SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution20SampleA.input"},
-//                              {"Solution20SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution21SampleA.input"},
-//                              {"Solution21SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution22SampleA.input"},
-//                              {"Solution22SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution23SampleA.input"},
-//                              {"Solution23SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution24SampleA.input"},
-//                              {"Solution24SampleA.input"},
-//                          },
-//                          {
-//                              {"Solution25SampleA.input"},
-//                              {"Solution25SampleA.input"},
-//                          }};
+const std::vector<std::filesystem::path>
+    SAMPLE_PATHS = {
+        "Sample01.input",
+        "Sample02.input",
+        "Sample03.input",
+        "Sample04.input",
+        "Sample05.input",
+        "Sample06.input",
+        "Sample07.input",
+        "Sample08.input",
+        "Sample09.input",
+        "Sample10.input",
+        "Sample11.input",
+        "Sample12.input",
+        "Sample13.input",
+        "Sample14.input",
+        "Sample15.input",
+        "Sample16.input",
+        "Sample17.input",
+        "Sample18.input",
+        "Sample19.input",
+        "Sample20.input",
+        "Sample21.input",
+        "Sample22.input",
+        "Sample23.input",
+        "Sample24.input",
+        "Sample25.input"};
 
-// struct Args {
-//   bool useSampleInput = false;
-//   bool useFullInput = false;
-//   bool shouldRender = false;
-//   bool runPartA = false;
-//   bool runPartB = false;
-//   std::vector<int> SolutionsToRun;
-// };
+struct Arguments
+{
+  bool sample = false;
+  bool input = false;
+  bool parta = false;
+  bool partb = false;
+  std::vector<int> solutionsInt;
+  std::vector<std::string> solutionsString;
+};
 
-// Args ReadArgs(int argc, char *argv[]) {
-//   {
-//     std::cout << YELLOW_TEXT;
-//     std::cout << " * ";
-//     std::cout << RESET_COLOR;
-//   }
+const std::string TITLE = "Advent of Code";
+const std::string STAR = YELLOW_TEXT " * " RESET_COLOR;
 
-//   std::string header = "Advent of Code";
-//   for (int i = 0; i < header.size(); ++i) {
-//     if (i % 2 == 0) {
-//       std::cout << GREEN_TEXT;
-//     }
+void PrintTitle()
+{
+  int color = 0;
+  std::cout << STAR;
+  for (const auto &character : TITLE)
+  {
+    if (color == 0)
+    {
+      std::cout << GREEN_TEXT << character << RESET_COLOR;
+      color = 1;
+    }
+    else
+    {
+      std::cout << RED_TEXT << character << RESET_COLOR;
+      color = 0;
+    }
+  }
+  std::cout << STAR << YELLOW_TEXT << "2023" << RESET_COLOR
+            << std::endl
+            << std::endl;
+}
 
-//     if (i % 2 == 1) {
-//       std::cout << RED_TEXT;
-//     }
+void PrintArguments(Arguments arguments)
+{
+  std::cout << STAR
+            << "Command line arguments: "
+            << std::endl
+            << std::endl
+            << GREEN_TEXT;
+  if (arguments.input)
+  {
+    std::cout << "  --input";
+  }
+  if (arguments.sample)
+  {
+    std::cout << "  --sample";
+  }
+  if (arguments.parta)
+  {
+    std::cout << "  --parta";
+  }
+  if (arguments.partb)
+  {
+    std::cout << "  --partb";
+  }
+  for (const auto &solution : arguments.solutionsString)
+  {
+    std::cout << "  " << solution;
+  }
+  std::cout << RESET_COLOR
+            << std::endl
+            << std::endl;
+}
 
-//     std::cout << header[i];
-//   }
+void PrintArgumentError()
+{
+  std::cout << RED_TEXT
+            << "\nNo Solutions specified for execution. Pass desired Solutions "
+            << "as command-line arguments. Sample usage:\n"
+            << RESET_COLOR;
 
-//   {
-//     std::cout << YELLOW_TEXT;
-//     std::cout << " * ";
-//     std::cout << " 2023\n\n";
-//   }
+  std::cout << "  AdventOfCode.exe "
+            << GREEN_TEXT
+            << "--Solution04\n"
+            << RESET_COLOR;
 
-//   Args result;
-//   if (argc > 1) {
-//     {
-//       std::cout << YELLOW_TEXT;
-//       std::cout << " * ";
-//       std::cout << RESET_COLOR;
-//       std::cout << "Command line arguments:\n";
-//     }
+  std::cout << "  AdventOfCode.exe "
+            << GREEN_TEXT
+            << "--render --Solution01 --Solution02\n"
+            << RESET_COLOR;
 
-//     for (int i = 1; i < argc; ++i) {
-//       std::string arg = argv[i];
-//       if (validArgs.contains(arg)) {
-//         std::cout << GREEN_TEXT << std::endl;
+  std::cout << "  AdventOfCode.exe "
+            << GREEN_TEXT
+            << "--partB --input --Solution02\n"
+            << RESET_COLOR;
 
-//         if (arg == "--sampleInput") {
-//           result.useSampleInput = true;
-//         } else if (arg == "--fullInput") {
-//           result.useFullInput = true;
-//         } else if (arg == "--render") {
-//           result.shouldRender = true;
-//         } else if (arg == "--partA") {
-//           result.runPartA = true;
-//         } else if (arg == "--partB") {
-//           result.runPartB = true;
-//         } else {
-//           result.SolutionsToRun.push_back(std::stoi(arg.substr(arg.size() - 2)));
-//         }
-//       } else {
-//         std::cout << RED_TEXT;
-//       }
+  std::cout << "  AdventOfCode.exe "
+            << GREEN_TEXT
+            << "--partA --sampleInput --Solution03\n"
+            << RESET_COLOR
+            << std::endl;
+  std::exit(1);
+}
 
-//       std::cout << "    " << argv[i] << "\n\n";
-//     }
-//   }
+Arguments ReadArgs(int argc, char *argv[])
+{
+  Arguments arguments;
+  if (argc < 2)
+  {
+    PrintArgumentError();
+  }
+  if (argc >= 2)
+  {
+    for (int i = 1; i < argc; ++i)
+    {
+      std::string arg = argv[i];
+      if (validArgs.contains(arg))
+      {
+        if (arg == "--sample")
+        {
+          arguments.sample = true;
+        }
+        else if (arg == "--input")
+        {
+          arguments.input = true;
+        }
+        else if (arg == "--partA")
+        {
+          arguments.parta = true;
+        }
+        else if (arg == "--partB")
+        {
+          arguments.partb = true;
+        }
+        else
+        {
+          arguments.solutionsString.push_back(arg);
+          arguments.solutionsInt.push_back(std::stoi(arg.substr(arg.size() - 2)));
+        }
+      }
+    }
+  }
 
-//   if (!result.runPartA && !result.runPartB) {
-//     result.runPartA = true;
-//     result.runPartB = true;
-//   }
+  if (!arguments.parta && !arguments.partb)
+  {
+    arguments.parta = true;
+    arguments.partb = true;
+  }
 
-//   if (!result.useSampleInput && !result.useFullInput) {
-//     result.useSampleInput = true;
-//     result.useFullInput = true;
-//   }
+  if (!arguments.sample && !arguments.input)
+  {
+    arguments.sample = true;
+    arguments.input = true;
+  }
 
+  std::ranges::sort(arguments.solutionsInt);
+  std::ranges::sort(arguments.solutionsString);
+  return arguments;
+}
 
-//   // std::ranges::sort(result.SolutionsToRun);
-//   return result;
-// }
+void ExecuteSolutions(Arguments arguments)
+{
 
-int main(int argc, char *argv[]) {
+  for (const auto &day : arguments.solutionsInt)
+  {
+    for (auto index = 0; index <= 1; index++)
+    {
+      if (index == 0 and !arguments.parta)
+      {
+        continue;
+      }
+      if (index == 1 and !arguments.partb)
+      {
+        continue;
+      }
+      std::cout << STAR
+                << "Running solution "
+                << CYAN_TEXT
+                << day
+                << RESET_COLOR
+                << ", part "
+                << MAGENTA_TEXT;
 
-CodeGenerator::GenerateMarkDownFiles();
-CodeGenerator::GenerateHeaders();
-CodeGenerator::GenerateSolutions();
-CodeGenerator::GenerateInputFiles();
+      std::function<void(std::filesystem::path)> solver;
+      if (index == 0)
+      {
+        solver = SOLUTIONS_A[day - 1];
+        std::cout << "A";
+      }
+      if (index == 1)
+      {
+        solver = SOLUTIONS_B[day - 1];
+        std::cout << "B";
+      }
+      std::cout << RESET_COLOR
+                << std::endl
+                << std::endl;
 
-  // Args args = ReadArgs(argc, argv);
-  // if (args.SolutionsToRun.empty()) {
-  //   std::cout << RED_TEXT;
-  //   std::cout << "\nNo Solutions specified for execution. Pass desired Solutions "
-  //                "as command-line arguments. Sample usage:\n";
-  //   std::cout << RESET_COLOR;
+      std::vector<std::string> inputPaths;
+      std::string directory = std::filesystem::current_path().string();
+      if (arguments.sample)
+      {
+        inputPaths.push_back(directory + "/source/samples/" + SAMPLE_PATHS[day - 1].string());
+      }
+      if (arguments.input)
+      {
+        inputPaths.push_back(directory + "/source/inputs/" + INPUT_PATHS[day - 1].string());
+      }
+      for (const auto &path : inputPaths)
+      {
+        std::cout << "\t\tUsing input file: "
+                  << CYAN_TEXT
+                  << path
+                  << RESET_COLOR
+                  << std::endl
+                  << std::endl;
 
-  //   std::cout << "  AdventOfCode.exe ";
-  //   std::cout << GREEN_TEXT;
-  //   std::cout << "--Solution04\n";
-  //   std::cout << RESET_COLOR;
+        auto start = std::chrono::high_resolution_clock::now();
+        solver(path);
+        auto end = std::chrono::high_resolution_clock::now();
+        auto duration = end - start;
 
-  //   std::cout << "  AdventOfCode.exe ";
-  //   std::cout << GREEN_TEXT;
-  //   std::cout << "--render --Solution01 --Solution02\n";
-  //   std::cout << RESET_COLOR;
+        std::cout << RESET_COLOR;
+        std::cout << "\t\tSolution executed in: "
+                  << YELLOW_TEXT
+                  << duration.count()
+                  << " us"
+                  << RESET_COLOR
+                  << std::endl
+                  << std::endl;
+      }
+    }
+  }
+}
 
-  //   std::cout << "  AdventOfCode.exe ";
-  //   std::cout << GREEN_TEXT;
-  //   std::cout << "--partB --fullInput --Solution02\n";
-  //   std::cout << RESET_COLOR;
+int main(int argc, char *argv[])
+{
 
-  //   std::cout << "  AdventOfCode.exe ";
-  //   std::cout << GREEN_TEXT;
-  //   std::cout << "--partA --sampleInput --Solution03\n";
-  //   std::cout << RESET_COLOR;
-  // }
+  {
+    // CodeGenerator::GenerateMarkDownFiles();
+    // CodeGenerator::GenerateHeaders();
+    // CodeGenerator::GenerateSolutions();
+    // CodeGenerator::GenerateInputFiles();
+  }
 
-  // for (int SolutionId : args.SolutionsToRun) {
-  //   for (auto i = 0; i < 2; ++i) {
-  //     if (i == 0 && !args.runPartA) {
-  //       continue;
-  //     }
-
-  //     if (i == 1 && !args.runPartB) {
-  //       continue;
-  //     }
-
-  //     {
-  //       std::cout << RESET_COLOR;
-  //       std::cout << YELLOW_TEXT;
-  //       std::cout << " * ";
-  //       std::cout << RESET_COLOR;
-  //       std::cout << "Running Solution ";
-  //       std::cout << CYAN_TEXT;
-  //       std::cout << SolutionId;
-  //       std::cout << RESET_COLOR;
-  //       std::cout << ", part ";
-
-  //       std::cout << MAGENTA_TEXT;
-  //       std::cout << (i == 0 ? 'A' : 'B');
-  //       std::cout << RESET_COLOR;
-  //       std::cout << ":\n\n";
-  //     }
-
-  //     std::vector<std::filesystem::path> inputPaths;
-  //     if (args.useSampleInput) {
-  //       inputPaths.append_range(SolutionSamplePaths[SolutionId - 1][i]);
-  //     }
-  //     if (args.useFullInput) {
-  //       inputPaths.append_range(SolutionInputPaths[SolutionId - 1]);
-  //     }
-
-  //     const auto solver =
-  //         i == 0 ? partASolvers[SolutionId - 1] : partBSolvers[SolutionId - 1];
-  //     for (const auto &inputPath : inputPaths) {
-  //       {
-  //         std::cout << RESET_COLOR;
-  //         std::cout << "\tUsing input file ";
-  //         std::cout << CYAN_TEXT;
-  //         std::cout << inputPath;
-  //         std::cout << RESET_COLOR;
-  //         std::cout << ":\n\n";
-  //       }
-
-  //       // Fully qualify the path to the input files, which have been copied
-  //       // next to the executable.
-  //       static const std::filesystem::path executablePath = argv[0];
-  //       std::filesystem::path fullInputPath =
-  //           executablePath.parent_path() / inputPath;
-
-  //       auto start = std::chrono::high_resolution_clock::now();
-  //       solver(fullInputPath, args.shouldRender);
-  //       auto stop = std::chrono::high_resolution_clock::now();
-  //       auto durationMs =
-  //           std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
-
-  //       {
-  //         std::cout << RESET_COLOR << std::endl;
-  //         std::cout << "\n\tSolver executed in ";
-  //         std::cout << YELLOW_TEXT;
-  //         std::cout << durationMs.count() << " ms";
-  //         std::cout << RESET_COLOR << std::endl;
-  //         std::cout << "\n\n";
-  //       }
-  //     }
-  //   }
-  // }
-
-
-
+  {
+    PrintTitle();                               // Print Title.
+    Arguments arguments = ReadArgs(argc, argv); // Get Arguments.
+    PrintArguments(arguments);                  // Print Arguments.
+    ExecuteSolutions(arguments);                // Execute Solutions.}
+  }
 }
