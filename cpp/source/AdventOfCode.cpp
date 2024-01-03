@@ -206,7 +206,7 @@ void PrintArgumentError()
 
   std::cout << "  AdventOfCode.exe "
             << GREEN_TEXT
-            << "--render --Solution01 --Solution02\n"
+            << "--Solution01 --Solution02\n"
             << RESET_COLOR;
 
   std::cout << "  AdventOfCode.exe "
