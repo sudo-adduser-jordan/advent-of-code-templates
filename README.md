@@ -2,6 +2,23 @@
 
 Advent of code templates for various programing languages.
 
+```
+├── build
+│   └── debug
+├── packages
+│   ├── lib
+│   └── lib2
+├── scripts
+    └── build-and-start.file
+└── source
+    ├── main.file
+    ├── code-generator.file
+    ├── inputs
+    ├── problems
+    ├── samples
+    └── solutions
+```
+
 
 ## Usage
 
