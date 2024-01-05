@@ -13,26 +13,27 @@ Advent of code templates for various programing languages.
 └── source
     ├── main.file
     ├── code-generator.file
+    ├── code-generator-template.file
     ├── inputs
     ├── problems
     ├── samples
     └── solutions
 ```
-`/build/debug/`
+`/build/debug/` : Executables / Binaries
 
-`/packages/  `
+`/packages/` : Dependices / Libraries
 
-`/scripts`
+`/scripts` : Scripts local to project
 
-`/source/`
+`/source/` : Main entry point / Code Generator / Code Generator Template
 
-`/source/inputs/`
+`/source/inputs/` : Advent of Code input data (.input)
 
-`/source/problems/`
+`/source/problems/` : Advent of Code problems (.md)
 
-`/source/samples/`
+`/source/samples/` : Advent of Code sample data (.input)
 
-`/source/solutions/`
+`/source/solutions/` : Solutions
 
 ## Usage
 
