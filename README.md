@@ -18,7 +18,21 @@ Advent of code templates for various programing languages.
     ├── samples
     └── solutions
 ```
+`/build/debug/`
 
+`/packages/  `
+
+`/scripts`
+
+`/source/`
+
+`/source/inputs/`
+
+`/source/problems/`
+
+`/source/samples/`
+
+`/source/solutions/`
 
 ## Usage
 
