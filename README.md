@@ -13,7 +13,7 @@ git clone https://github.com/sudo-adduser-jordan/advent-of-code-templates
 
 ## Contributing
 
-Contributions welcomed.
+Contributions welcomed. Please follow the sample project structure.
 
 
 
