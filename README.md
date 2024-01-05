@@ -9,7 +9,7 @@ Advent of code templates for various programing languages.
 │   ├── lib
 │   └── lib2
 ├── scripts
-    └── build-and-start.file
+│   └── build-and-start.file
 └── source
     ├── main.file
     ├── code-generator.file
